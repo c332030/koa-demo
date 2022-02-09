@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@types/koa": "^2.13.4",
+    "@vercel/ncc": "^0.33.1",
     "koa": "^2.13.4",
     "koa-body": "^4.2.0",
     "nodemon": "^2.0.15",
@@ -8,9 +9,10 @@
   },
   "name": "koa-demo",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/cache/index.js",
   "scripts": {
     "start": "tsc --build && node ./dist/index.js",
+    "build": "tsc --build && ncc build -m",
     "watch": "nodemon --ext js,ts --exec npm run start"
   },
   "author": "",

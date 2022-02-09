@@ -1,6 +1,7 @@
 
 import Koa from "koa";
 import bodyParser from "koa-body";
+import StringUtils from "./util/StringUtils";
 
 const app:Koa = new Koa();
 
@@ -9,6 +10,8 @@ app.use(bodyParser())
 app.use((ctx: Koa.DefaultContext) => {
   console.log(ctx.request.body)
   console.log("hello")
+
+  console.log(StringUtils.test())
 
   ctx.body = "hello world！";
 })
