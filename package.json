@@ -11,7 +11,7 @@
   "version": "1.0.0",
   "main": "dist/cache/index.js",
   "scripts": {
-    "start": "tsc --build && node ./dist/index.js",
+    "start": "tsc --build && node ./dist/cache/index.js",
     "build": "tsc --build && ncc build -m",
     "watch": "nodemon --ext js,ts --exec npm run start"
   },
