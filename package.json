@@ -1,7 +1,6 @@
 {
   "dependencies": {
     "@types/koa": "^2.13.4",
-    "@vercel/ncc": "^0.33.1",
     "koa": "^2.13.4",
     "koa-body": "^4.2.0",
     "nodemon": "^2.0.15",
@@ -11,11 +10,17 @@
   "version": "1.0.0",
   "main": "dist/cache/index.js",
   "scripts": {
-    "start": "tsc --build && node ./dist/cache/index.js",
-    "build": "tsc --build && ncc build -m",
+    "clean": "rimraf dist",
+    "start": "npm run build && node ./dist/cache/index.js",
+    "build": "tsc --build",
+    "ncc": "npm run build && ncc build",
     "watch": "nodemon --ext js,ts --exec npm run start"
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "@vercel/ncc": "^0.33.1",
+    "rimraf": "^3.0.2"
+  }
 }
