@@ -18,6 +18,6 @@ app.use((ctx: Koa.DefaultContext) => {
 
 const port: number = 3000;
 app.listen(port, () => {
-  console.log(`seccess start server`)
+  console.log(`success start server`)
   console.log(`local: http://127.0.0.1:${port}`)
 })
