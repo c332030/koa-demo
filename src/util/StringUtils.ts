@@ -2,7 +2,7 @@
  * <p>
  *   Description: StringUtils
  * </p>
- * @author c332030（袁兴旺）
+ * @author c332030
  * @version 1.0
  */
 
